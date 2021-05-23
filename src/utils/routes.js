@@ -8,6 +8,7 @@ import TeacherDashboard from "../pages/TeacherDashboard";
 import PasswordReset from "../pages/PasswordReset";
 import Features from "../pages/Features";
 import Guidelines from "../pages/Guidelines";
+import NotFound from "../pages/NotFound";
 
 export default [
   {
@@ -57,5 +58,8 @@ export default [
   {
     path: "/passwordreset",
     components: () => <PasswordReset />,
+  },
+  {
+    components: () => <NotFound />,
   },
 ];

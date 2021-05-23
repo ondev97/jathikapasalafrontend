@@ -1,0 +1,18 @@
+.title {
+  width: 100%;
+  text-align: center;
+  padding: 45px 0;
+}
+.title h1 {
+  font-size: 45px;
+  color: var(--h1Fontcolor);
+}
+.bodySvg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+img {
+  width: 50%;
+}
