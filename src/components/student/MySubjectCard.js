@@ -44,6 +44,10 @@ export default function MySubjectsCard({
                 {subject_type}
               </li>
               <li>
+                <i className="fas fa-language"></i>
+                {class_type}
+              </li>
+              <li>
                 <i className="fas fa-school"></i>
                 {class_type}
               </li>

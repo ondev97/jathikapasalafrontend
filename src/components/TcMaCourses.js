@@ -70,6 +70,10 @@ export default function TcMaCourses({
                 {class_type}
               </h4>
               <h5>
+                <i className="fas fa-language"></i>
+                {subject_type}
+              </h5>
+              <h5>
                 <i className="fas fa-school"></i>
                 {subject_type}
               </h5>
