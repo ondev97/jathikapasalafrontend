@@ -169,6 +169,16 @@ input[type="number"]::-webkit-outer-spin-button {
 .subject_form .main_form .sub_sect p:nth-child(1) {
   margin-right: 15px;
 }
+.subject_form .main_form p select {
+  width: 100%;
+  padding: 9px 3px;
+  outline: none;
+  border: 1px solid #c1c1c1;
+  border-radius: 3px;
+  color: var(--h1Fontcolor);
+  font-weight: 500;
+  font-size: 13px;
+}
 .subject_form .main_form .sub_sect p select {
   width: 100%;
   padding: 9px 3px;

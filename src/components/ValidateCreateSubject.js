@@ -17,10 +17,13 @@ export default function ValidateSubjectCreateForm(values) {
     errors.subject_des = "Description Must Be Less Than 500 Characters";
   }
   if (!values.class_type) {
-    errors.class_type = "Class Type Is Required";
+    errors.class_type = "Class Grade Is Required";
   }
   if (!values.subject_type) {
     errors.subject_type = "Subject Type Is Required";
+  }
+  if (!values.subject_medium) {
+    errors.subject_medium = "Subject Medium Is Required";
   }
 
   return errors;

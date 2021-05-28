@@ -146,9 +146,16 @@ export default function CreateSubjectForm({
             <option value="Grade 7">Grade 7</option>
             <option value="Grade 8">Grade 8</option>
             <option value="Grade 9">Grade 9</option>
+            <option value="" disabled>
+              O/L
+            </option>
             <option value="Grade 10">Grade 10</option>
             <option value="Grade 11">Grade 11</option>
+            <option value="" disabled>
+              A/L
+            </option>
             <option value="Grade 12">Grade 12</option>
+            <option value="Grade 13">Grade 13</option>
           </select>
           {formErrors.class_type && (
             <span className={`tip ${hide.class_type ? "hidetip" : ""}`}>
@@ -179,16 +186,15 @@ export default function CreateSubjectForm({
           )}
         </p>
       </div>
-
-
+      {console.log(formValue)}
       <p>
-        <label htmlFor="st">Medium</label>
+        <label htmlFor="stm">Medium</label>
         <select
-            // name="subject_type"
-            // id="st"
-            // value={formValue.subject_type}
-            // onChange={hadelChabgeFormValues}
-            // onFocus={hideError}
+          name="subject_medium"
+          id="stm"
+          value={formValue.subject_medium}
+          onChange={hadelChabgeFormValues}
+          onFocus={hideError}
         >
           <option value="" disabled>
             Select Medium
@@ -197,10 +203,10 @@ export default function CreateSubjectForm({
           <option value="English">English</option>
           <option value="Tamil">தமிழ்</option>
         </select>
-        {formErrors.subject_type && (
-            <span className={`tip ${hide.subject_type ? "hidetip" : ""}`}>
-              {formErrors.subject_type}
-            </span>
+        {formErrors.subject_medium && (
+          <span className={`tip ${hide.subject_medium ? "hidetip" : ""}`}>
+            {formErrors.subject_medium}
+          </span>
         )}
       </p>
 
