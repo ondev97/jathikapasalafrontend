@@ -126,7 +126,7 @@ export default function CreateSubjectForm({
       </div>
       <div className="sub_sect">
         <p>
-          <label htmlFor="ct">Class Type</label>
+          <label htmlFor="ct">Grade</label>
           <select
             name="class_type"
             id="ct"
@@ -135,11 +135,20 @@ export default function CreateSubjectForm({
             onFocus={hideError}
           >
             <option value="" disabled>
-              Select Class Type
+              Select Grade
             </option>
-            <option value="a/l">A/L</option>
-            <option value="o/l">O/L</option>
-            <option value="other">Other</option>
+            <option value="Grade 1">Grade 1</option>
+            <option value="Grade 2">Grade 2</option>
+            <option value="Grade 3">Grade 3</option>
+            <option value="Grade 4">Grade 4</option>
+            <option value="Grade 5">Grade 5</option>
+            <option value="Grade 6">Grade 6</option>
+            <option value="Grade 7">Grade 7</option>
+            <option value="Grade 8">Grade 8</option>
+            <option value="Grade 9">Grade 9</option>
+            <option value="Grade 10">Grade 10</option>
+            <option value="Grade 11">Grade 11</option>
+            <option value="Grade 12">Grade 12</option>
           </select>
           {formErrors.class_type && (
             <span className={`tip ${hide.class_type ? "hidetip" : ""}`}>
@@ -170,6 +179,31 @@ export default function CreateSubjectForm({
           )}
         </p>
       </div>
+
+
+      <p>
+        <label htmlFor="st">Medium</label>
+        <select
+            // name="subject_type"
+            // id="st"
+            // value={formValue.subject_type}
+            // onChange={hadelChabgeFormValues}
+            // onFocus={hideError}
+        >
+          <option value="" disabled>
+            Select Medium
+          </option>
+          <option value="Sinhala">සිංහල</option>
+          <option value="English">English</option>
+          <option value="Tamil">தமிழ்</option>
+        </select>
+        {formErrors.subject_type && (
+            <span className={`tip ${hide.subject_type ? "hidetip" : ""}`}>
+              {formErrors.subject_type}
+            </span>
+        )}
+      </p>
+
       <p>
         <button
           className="sub"
