@@ -62,32 +62,9 @@ export default function StudentMainDashboard() {
   return (
     <>
       <div className="all_st_subs">
-        <div className="pagetop editep">
-          <div className="search_row edited">
-            <select type="text" name="search" onChange={handelSearchSubject}>
-              <option value="">SELECT GRADE</option>
-              <option value="Grade 01">Grade 01</option>
-              <option value="Grade 02">Grade 02</option>
-              <option value="Grade 03">Grade 03</option>
-              <option value="Grade 04">Grade 04</option>
-              <option value="Grade 05">Grade 05</option>
-              <option value="Grade 06">Grade 06</option>
-              <option value="Grade 07">Grade 07</option>
-              <option value="Grade 08">Grade 08</option>
-              <option value="Grade 09">Grade 09</option>
-              <option disabled>O/L</option>
-              <option value="Grade 10">Grade 10</option>
-              <option value="Grade 11">Grade 11</option>
-              <option disabled>A/L</option>
-              <option value="Grade 12">Grade 12</option>
-              <option value="Grade 13">Grade 13</option>
-            </select>
-            <select type="text" name="medium" onChange={handelSearchSubject}>
-              <option value="">SELECT Medium</option>
-              <option value="English">English</option>
-              <option value="Sinhala">සිංහල</option>
-              <option value="Tamil">தமிழ்</option>
-            </select>
+        <div className="pagetop">
+          <h1>MY SUBJECTS</h1>
+          <div className="search_row">
             <input
               type="text"
               name="search"
@@ -118,6 +95,7 @@ export default function StudentMainDashboard() {
                   short_description={det.short_description}
                   class_type={det.class_type}
                   subject_type={det.subject_type}
+                  subject_medium={det.medium}
                 />
               ))}
             </InfiniteScroll>

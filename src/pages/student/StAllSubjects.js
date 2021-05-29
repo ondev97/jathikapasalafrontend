@@ -15,6 +15,8 @@ export default function StAllSubjects() {
   const [isLoading, setisLoading] = useState(false);
   const [nextPage, setnextPage] = useState(null);
   const [search, setsearch] = useState("");
+  const [medium, setmedium] = useState("");
+  const [grade, setgrade] = useState("");
   const [page, setpage] = useState(1);
   //get acDetails from Redux Store
   const usDetails = useSelector((state) => state.accountDetails);
@@ -23,14 +25,14 @@ export default function StAllSubjects() {
   const url = `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/subjectlist`;
 
   useEffect(() => {
-    if (search === "") {
+    if (search === "" && medium === "" && grade === "") {
       const fetchurl = `${url}/?page=${page}`;
       getSubjectDetails(fetchurl);
     } else {
-      const fetchurl = `${url}/?page=${page}&search=${search}`;
+      const fetchurl = `${url}/?page=${page}&search=${search}&grade=${grade}&medium=${medium}`;
       getSubjectDetails(fetchurl);
     }
-  }, [usDetails, page, search]);
+  }, [usDetails, page, search, grade, medium]);
 
   const getSubjectDetails = async (fetchurl) => {
     setisLoading(true);
@@ -62,8 +64,17 @@ export default function StAllSubjects() {
 
   const handelSearchSubject = (e) => {
     const search = e.target.value;
+    const name = e.target.name;
+    if (name === "Grade") {
+      const grade = e.target.value;
+      debounce(() => setgrade(grade), 500);
+    } else if (name === "medium") {
+      const medium = e.target.value;
+      debounce(() => setmedium(medium), 500);
+    } else {
+      debounce(() => setsearch(search), 500);
+    }
     setpage(1);
-    debounce(() => setsearch(search), 500);
   };
 
   return (
@@ -71,21 +82,25 @@ export default function StAllSubjects() {
       <div className="all_st_subs">
         <div className="pagetop editep">
           <div className="search_row edited">
-            <select type="text" name="search" onChange={handelSearchSubject}>
+            <select type="text" name="Grade" onChange={handelSearchSubject}>
               <option value="">SELECT GRADE</option>
-              <option value="Grade 01">Grade 01</option>
-              <option value="Grade 02">Grade 02</option>
-              <option value="Grade 03">Grade 03</option>
-              <option value="Grade 04">Grade 04</option>
-              <option value="Grade 05">Grade 05</option>
-              <option value="Grade 06">Grade 06</option>
-              <option value="Grade 07">Grade 07</option>
-              <option value="Grade 08">Grade 08</option>
-              <option value="Grade 09">Grade 09</option>
-              <option disabled>O/L</option>
+              <option value="Grade 1">Grade 01</option>
+              <option value="Grade 2">Grade 02</option>
+              <option value="Grade 3">Grade 03</option>
+              <option value="Grade 4">Grade 04</option>
+              <option value="Grade 5">Grade 05</option>
+              <option value="Grade 6">Grade 06</option>
+              <option value="Grade 7">Grade 07</option>
+              <option value="Grade 8">Grade 08</option>
+              <option value="Grade 9">Grade 09</option>
+              <option className="optionS" disabled>
+                O/L
+              </option>
               <option value="Grade 10">Grade 10</option>
               <option value="Grade 11">Grade 11</option>
-              <option disabled>A/L</option>
+              <option className="optionS" disabled>
+                A/L
+              </option>
               <option value="Grade 12">Grade 12</option>
               <option value="Grade 13">Grade 13</option>
             </select>
@@ -127,6 +142,7 @@ export default function StAllSubjects() {
                   short_description={det.short_description}
                   class_type={det.class_type}
                   subject_type={det.subject_type}
+                  subject_medium={det.medium}
                 />
               ))}
             </InfiniteScroll>

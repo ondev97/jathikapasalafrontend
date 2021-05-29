@@ -15,6 +15,7 @@ export default function TcMaCourses({
   short_description,
   class_type,
   subject_type,
+  subject_medium,
 }) {
   //get acDetails from Redux Store
   const usDetails = useSelector((state) => state.accountDetails);
@@ -71,7 +72,11 @@ export default function TcMaCourses({
               </h4>
               <h5>
                 <i className="fas fa-language"></i>
-                {subject_type}
+                {subject_medium === "Sinhala"
+                  ? "සිංහල"
+                  : subject_medium === "Tamil"
+                  ? "தமிழ்"
+                  : subject_medium}
               </h5>
               <h5>
                 <i className="fas fa-school"></i>

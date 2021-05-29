@@ -14,6 +14,15 @@
   .all_st_subs .all_sub_body {
     justify-content: center;
   }
+  .all_st_subs .pagetop .search_row.edited {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .all_st_subs .pagetop .search_row.edited select,
+  .search_row.edited input[type="text"] {
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
 }
 @media screen and (max-width: 550px) {
   .st_top_manage_body .st_mange_cos_body .st_manage_cos_search input {

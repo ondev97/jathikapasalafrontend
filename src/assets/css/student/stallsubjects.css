@@ -215,6 +215,12 @@
   border-radius: 3px !important;
   border: 1px solid #eee !important;
   padding: 15px;
+  outline: red;
+}
+
+.all_st_subs .pagetop .search_row.edited select .optionS {
+  color: var(--h1Fontcolor);
+  background-color: #ffe5ed;
 }
 .all_st_subs .pagetop .search_row.edited button {
   width: 120px;

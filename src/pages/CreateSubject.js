@@ -55,12 +55,13 @@ export default function CreateSubject() {
       const blob = b64toBlob(input, file.type);
       formData.append("subject_cover", blob, file.name);
     }
-
+    console.log(formValue);
     formData.append("subject_name", formValue.subject_title);
     formData.append("short_description", formValue.subject_shdes);
     formData.append("description", formValue.sub_des);
     formData.append("class_type", formValue.class_type);
     formData.append("subject_type", formValue.subject_type);
+    formData.append("medium", formValue.subject_medium);
 
     Axios.post(
       `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/createsubject/${usDetails.id}/`,

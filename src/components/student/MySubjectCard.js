@@ -13,6 +13,7 @@ export default function MySubjectsCard({
   short_description,
   class_type,
   subject_type,
+  subject_medium,
 }) {
   //get acDetails from Redux Store
   const usDetails = useSelector((state) => state.accountDetails);
@@ -45,7 +46,11 @@ export default function MySubjectsCard({
               </li>
               <li>
                 <i className="fas fa-language"></i>
-                {class_type}
+                {subject_medium === "Sinhala"
+                  ? "සිංහල"
+                  : subject_medium === "Tamil"
+                  ? "தமிழ்"
+                  : subject_medium}
               </li>
               <li>
                 <i className="fas fa-school"></i>
