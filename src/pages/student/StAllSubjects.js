@@ -82,6 +82,12 @@ export default function StAllSubjects() {
       <div className="all_st_subs">
         <div className="pagetop editep">
           <div className="search_row edited">
+            <select type="text" name="medium" onChange={handelSearchSubject}>
+              <option value="">SELECT Medium</option>
+              <option value="English">English</option>
+              <option value="Sinhala">සිංහල</option>
+              <option value="Tamil">தமிழ்</option>
+            </select>
             <select type="text" name="Grade" onChange={handelSearchSubject}>
               <option value="">SELECT GRADE</option>
               <option value="Grade 1">Grade 01</option>
@@ -103,12 +109,6 @@ export default function StAllSubjects() {
               </option>
               <option value="Grade 12">Grade 12</option>
               <option value="Grade 13">Grade 13</option>
-            </select>
-            <select type="text" name="medium" onChange={handelSearchSubject}>
-              <option value="">SELECT Medium</option>
-              <option value="English">English</option>
-              <option value="Sinhala">සිංහල</option>
-              <option value="Tamil">தமிழ்</option>
             </select>
             <input
               type="text"
