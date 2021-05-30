@@ -83,7 +83,7 @@ export default function StAllSubjects() {
         <div className="pagetop editep">
           <div className="search_row edited">
             <select type="text" name="medium" onChange={handelSearchSubject}>
-              <option value="">SELECT Medium</option>
+              <option value="">SELECT MEDIUM</option>
               <option value="English">English</option>
               <option value="Sinhala">සිංහල</option>
               <option value="Tamil">தமிழ்</option>
