@@ -125,4 +125,7 @@
     .re_player {
     margin: 0 !important;
   }
+  .all_st_subs .all_sub_body.list_view_st {
+    align-items: center;
+  }
 }
