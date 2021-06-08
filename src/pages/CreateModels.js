@@ -197,6 +197,11 @@ function CreateModels() {
               editor={ClassicEditor}
               data={formValues.msg}
               onChange={editorOnChangeHandel}
+              config={{
+                ckfinder: {
+                  uploadUrl: `${process.env.REACT_APP_LMS_MAIN_URL}/course-api/uploads/`,
+                },
+              }}
             />
           </div>
           {mediafiles !== null ? (

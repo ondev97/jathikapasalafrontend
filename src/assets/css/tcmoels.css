@@ -219,6 +219,28 @@
   .al_models
   .on_model_body
   .model_body_row
+  figure.image {
+  text-align: center;
+  margin: 5px;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  figure.image
+  img {
+  width: initial;
+  min-height: 60%;
+  max-width: 70%;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
   p
   i {
   margin-right: 10px;
