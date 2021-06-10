@@ -219,6 +219,109 @@
   .al_models
   .on_model_body
   .model_body_row
+  .button-row {
+  margin: 20px 0;
+  width: 100%;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  a {
+  text-decoration: none;
+  color: #fff;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  button {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  button.youtube {
+  background-color: #ef4a4a;
+  transition: box-shadow 0.3s ease;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  button.zoom {
+  background-color: #2486e6;
+  transition: box-shadow 0.3s ease;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  button.youtube:hover {
+  box-shadow: 0 0 10px #ef4a4a;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  button.zoom:hover {
+  box-shadow: 0 0 10px #2486e6;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  .button-row
+  button
+  i {
+  color: #fff;
+  margin-right: 8px;
+  font-size: 18px;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
+  figure.image {
+  text-align: center;
+  margin: 5px;
+}
+.models
+  .md_all_models
+  .md_models
+  .al_models
+  .on_model_body
+  .model_body_row
   figure.image {
   text-align: center;
   margin: 5px;
