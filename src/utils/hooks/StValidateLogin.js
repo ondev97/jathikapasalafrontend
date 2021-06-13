@@ -33,48 +33,48 @@ function StValidateLogin() {
 
   function submit() {
     //         console.log();
-    Axios.post(`${process.env.REACT_APP_LMS_MAIN_URL}/account-api/testlogin/`, {
-      username: values.un.toUpperCase(),
-      password: values.pw,
-    })
-      .then((res) => {
-        if (!res.data.status) {
-          Axios.post(`${process.env.REACT_APP_LMS_MAIN_URL}/rest-auth/login/`, {
-            username: values.un.toUpperCase(),
-            password: values.pw,
-          })
-            .then((res) => {
-              setacDetails(res.data);
-            })
-            .catch((err) => {
-              seterrors({
-                ...errors,
-                comerrors: err.response.data.non_field_errors,
-              });
-            });
-        } else {
-          seterrors({
-            ...errors,
-            comerrors: "Someone is already logged into this account",
-          });
-        }
-      })
-      .catch((err) => {
-        //check err and set state
-        // console.log(err.response.data);
-        // seterrors({...errors,"comerrors":err.response.data});
-      });
-
-    // Axios.post(`${process.env.REACT_APP_LMS_MAIN_URL}/rest-auth/login/`, {
+    // Axios.post(`${process.env.REACT_APP_LMS_MAIN_URL}/account-api/testlogin/`, {
     //   username: values.un.toUpperCase(),
     //   password: values.pw,
     // })
     //   .then((res) => {
-    //     setacDetails(res.data);
+    //     if (!res.data.status) {
+    //       Axios.post(`${process.env.REACT_APP_LMS_MAIN_URL}/rest-auth/login/`, {
+    //         username: values.un.toUpperCase(),
+    //         password: values.pw,
+    //       })
+    //         .then((res) => {
+    //           setacDetails(res.data);
+    //         })
+    //         .catch((err) => {
+    //           seterrors({
+    //             ...errors,
+    //             comerrors: err.response.data.non_field_errors,
+    //           });
+    //         });
+    //     } else {
+    //       seterrors({
+    //         ...errors,
+    //         comerrors: "Someone is already logged into this account",
+    //       });
+    //     }
     //   })
     //   .catch((err) => {
-    //     seterrors({ ...errors, comerrors: err.response.data.non_field_errors });
+    //     //check err and set state
+    //     // console.log(err.response.data);
+    //     // seterrors({...errors,"comerrors":err.response.data});
     //   });
+
+    Axios.post(`${process.env.REACT_APP_LMS_MAIN_URL}/rest-auth/login/`, {
+      username: values.un.toUpperCase(),
+      password: values.pw,
+    })
+      .then((res) => {
+        setacDetails(res.data);
+      })
+      .catch((err) => {
+        seterrors({ ...errors, comerrors: err.response.data.non_field_errors });
+      });
   }
 
   useEffect(() => {
