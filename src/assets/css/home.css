@@ -503,3 +503,21 @@
   width: 100%;
   filter: grayscale(32%);
 }
+/*Whats app button*/
+.waht_app {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.waht_app button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #25d366;
+  background-color: #25d366;
+  cursor: pointer;
+}
+.waht_app button i {
+  color: #fff;
+  font-size: 30px;
+}
